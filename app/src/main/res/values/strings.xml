@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Сompany</string>
+    <string name="no_internet">Нет соединения с интернетом</string>
+    <string name="specialities">Специальности</string>
+    <string name="employees">Сотрудники</string>
+    <string name="birthday">Дата рождения:</string>
+    <string name="age">Возраст:</string>
+    <string name="no_data">Нет сохраненных данных. Свайпните, чтобы повторить попытку</string>
+</resources>

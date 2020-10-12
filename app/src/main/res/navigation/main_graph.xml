@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/specialitiesFragment">
+
+    <fragment
+        android:id="@+id/specialitiesFragment"
+        android:name="com.polyblack.company.ui.speciality.SpecialitiesFragment"
+        android:label="specialities_fragment"
+        tools:layout="@layout/specialities_fragment">
+        <action
+            android:id="@+id/action_specialitiesFragment_to_employeesFragment"
+            app:destination="@id/employeesFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/specialitiesFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/employeesFragment"
+        android:name="com.polyblack.company.ui.employee.EmployeesFragment"
+        android:label="employees_fragment"
+        tools:layout="@layout/employees_fragment" >
+        <action
+            android:id="@+id/action_employeesFragment_to_employeeDetailedFragment"
+            app:destination="@id/employeeDetailedFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/employeesFragment"/>
+        <argument
+            android:name="specialityId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDetailedFragment"
+        android:name="com.polyblack.company.ui.employee_detailed.EmployeeDetailedFragment"
+        android:label="employee_detailed_fragment"
+        tools:layout="@layout/employee_detailed_fragment" >
+        <argument
+            android:name="employeeId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
